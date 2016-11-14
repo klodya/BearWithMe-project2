@@ -133,7 +133,7 @@ public class Predictions {
     public String getDrunkPrediction(){
         Random rand = new Random();
         int listSize = getDrunkPredictionsLength();
-        int index = rand.nextInt()(listSize);
+        int index = rand.nextInt(listSize);
         String prediction = getDrunkPredictionAtIndex(index);
         return prediction;
     }
@@ -177,6 +177,17 @@ public class Predictions {
         }
     }
 
+    private void setUpDrunkPredictions(){
+        String[] drunkPredictions = {
+                "ooh *hic* that sure..sounds..*hic*",
+                "Ooft...BURP..*hic*",
+                "Where my honeyz at?!"
+        };
+
+        for (String drunkPrediction : drunkPredictions){
+            mDrunkPredictions.add(drunkPrediction);
+        }
+    }
 
 }
 
