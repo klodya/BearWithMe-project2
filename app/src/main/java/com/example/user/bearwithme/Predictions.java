@@ -12,6 +12,7 @@ public class Predictions {
     protected ArrayList<String> mBadPredictions;
     protected ArrayList<String> mMediocrePredictions;
     protected ArrayList<String> mGoodPredictions;
+    protected ArrayList<String> mDrunkPredictions;
 
 
     public Predictions(){
@@ -21,12 +22,16 @@ public class Predictions {
         setUpMediocrePredictions();
         mGoodPredictions = new ArrayList<String>();
         setUpGoodPredictions();
+        mDrunkPredictions = new ArrayList<String>();
+        setUpDrunkPredictions();
     }
 
     public Predictions(ArrayList<String> alreadyPredicted){
         mBadPredictions = new ArrayList<String>(alreadyPredicted);
         mMediocrePredictions = new ArrayList<String>(alreadyPredicted);
         mGoodPredictions = new ArrayList<String>(alreadyPredicted);
+        mDrunkPredictions = new ArrayList<String>(alreadyPredicted);
+
     }
 
     public ArrayList<String> getBadPredictions(){
@@ -41,6 +46,12 @@ public class Predictions {
         return new ArrayList<String>(mGoodPredictions);
     }
 
+    public ArrayList<String> getDrunkPredictions(){
+        return new ArrayList<String>(mDrunkPredictions);
+    }
+
+
+
     public void createBadPrediction(String badPrediction){
         mBadPredictions.add(badPrediction);
     }
@@ -52,6 +63,12 @@ public class Predictions {
     public void createGoodPrediction(String goodPrediction){
         mGoodPredictions.add(goodPrediction);
     }
+
+    public void createDrunkPrediction(String drunkPrediction){
+        mDrunkPredictions.add(drunkPrediction);
+    }
+
+
 
     public int getBadPredictionsLength(){
         return mBadPredictions.size();
@@ -65,6 +82,12 @@ public class Predictions {
         return mGoodPredictions.size();
     }
 
+    public int getDrunkPredictionsLength(){
+        return mDrunkPredictions.size();
+    }
+
+
+
     public String getBadPredictionAtIndex(int index){
         return mBadPredictions.get(index);
     }
@@ -76,6 +99,12 @@ public class Predictions {
     public String getGoodPredictionAtIndex(int index){
         return mGoodPredictions.get(index);
     }
+
+    public String getDrunkPredictionAtIndex(int index){
+        return mDrunkPredictions.get(index);
+    }
+
+
 
     public String getBadPrediction(){
         Random rand = new Random();
@@ -101,8 +130,17 @@ public class Predictions {
         return prediction;
     }
 
-    private void setUpBadPredictions() {
+    public String getDrunkPrediction(){
+        Random rand = new Random();
+        int listSize = getDrunkPredictionsLength();
+        int index = rand.nextInt()(listSize);
+        String prediction = getDrunkPredictionAtIndex(index);
+        return prediction;
+    }
 
+
+
+    private void setUpBadPredictions() {
         String[] badPredictions = {
                 "Shoo Human",
                 "That is irrelevant",
@@ -115,7 +153,6 @@ public class Predictions {
     }
 
     private void setUpMediocrePredictions() {
-
         String[] mediocrePredictions = {
                 "It's hard to tell when I'm still hungry",
                 "Maybe a beer would help me think",

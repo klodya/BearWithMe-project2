@@ -1,5 +1,6 @@
 package com.example.user.bearwithme;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -24,6 +25,7 @@ public abstract class Bear {
         this.mBadPredictions = new Predictions();
         this.mMediocrePredictions = new Predictions();
         this.mGoodPredictions = new Predictions();
+        this.mDrunkPredictions = new Predictions();
     }
 
     public String type(){
@@ -57,6 +59,20 @@ public abstract class Bear {
         this.mBelly.clear();
     }
 
+    public boolean drunk() {
+        if (mBelly.isEmpty()) {
+            return false;
+        }
+
+        for (Feedable item : mBelly){
+            if (item.feedableType() != "Beer") {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     public String bearPredicts() {
         if (bellyCount() == 0) {
             return mBadPredictions.getBadPrediction();
@@ -66,6 +82,9 @@ public abstract class Bear {
         }
         if(bellyCount() >= 3) {
             return mGoodPredictions.getGoodPrediction();
+        }
+        if (drunk() == true){
+            return mDrunkPredictions.getDrunkPrediction();
         }
         return null;
     }

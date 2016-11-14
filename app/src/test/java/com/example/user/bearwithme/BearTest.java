@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static junit.framework.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by user on 13/11/2016.
@@ -18,8 +19,6 @@ public class BearTest {
     Beer beer;
     Donut donut;
     CheeseBurger cheeseBurger;
-
-
 
     @Before
     public void before(){
@@ -80,15 +79,20 @@ public class BearTest {
     }
 
     @Test
+    public void bearCanGetDrunk(){
+        brownBear.feedBear(beer);
+        assertEquals(true, brownBear.drunk());
+    }
+
+    @Test
     public void bearCanPredictBellyEmpty(){
         assertEquals("Shoo Human", brownBear.bearPredicts());
-
     }
 
     @Test
     public void bearCanPredictBellyHalfFull(){
         brownBear.feedBear(cheeseBurger);
-        assertEquals("It is potentially possible", brownBear.bearPredicts());
+        assertEquals("I like the taste of donuts.", brownBear.bearPredicts());
     }
 
     @Test
@@ -97,7 +101,7 @@ public class BearTest {
         brownBear.feedBear(donut);
         brownBear.feedBear(beer);
         brownBear.feedBear(beer);
-        assertEquals("Sure, why not!", brownBear.bearPredicts());
+        assertEquals("Sure, why not.", brownBear.bearPredicts());
     }
 
 }

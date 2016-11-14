@@ -7,6 +7,6 @@ package com.example.user.bearwithme;
 public class Donut implements Feedable {
 
     public String feedableType(){
-        return "yummo!";
+        return "donut!";
     }
 }
