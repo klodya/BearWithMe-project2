@@ -50,5 +50,11 @@ public abstract class Bear {
         this.mBelly.clear();
     }
 
+    public String bearPredicts() {
+        ArrayList<String> predictions = new ArrayList<String>();
+        if (bellyCount() == 0)
+        return String.valueOf(predictions);
 
+        return null;
+    }
 }

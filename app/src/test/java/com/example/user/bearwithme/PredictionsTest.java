@@ -1,7 +1,5 @@
 package com.example.user.bearwithme;
 
-import android.preference.PreferenceManager;
-
 import org.junit.Before;
 import org.junit.Test;
 
