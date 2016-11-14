@@ -13,10 +13,17 @@ public abstract class Bear {
     private String type;
     private String name;
 
+    Predictions mBadPredictions;
+    Predictions mMediocrePredictions;
+    Predictions mGoodPredictions;
+
     public Bear(String type, String name, ArrayList<Feedable> belly){
         this.type = type;
         this.name = name;
         this.mBelly = new ArrayList<Feedable>();
+        this.mBadPredictions = new Predictions();
+        this.mMediocrePredictions = new Predictions();
+        this.mGoodPredictions = new Predictions();
     }
 
     public String type(){
@@ -51,10 +58,15 @@ public abstract class Bear {
     }
 
     public String bearPredicts() {
-        ArrayList<String> predictions = new ArrayList<String>();
-        if (bellyCount() == 0)
-        return String.valueOf(predictions);
-
+        if (bellyCount() == 0) {
+            return mBadPredictions.getBadPrediction();
+        }
+        if (bellyCount() < 3) {
+            return mMediocrePredictions.getMediocrePrediction();
+        }
+        if(bellyCount() >= 3) {
+            return mGoodPredictions.getGoodPrediction();
+        }
         return null;
     }
 }

@@ -9,41 +9,136 @@ import java.util.Random;
 
 public class Predictions {
 
-    protected ArrayList<String> mPredictions;
+    protected ArrayList<String> mBadPredictions;
+    protected ArrayList<String> mMediocrePredictions;
+    protected ArrayList<String> mGoodPredictions;
+
 
     public Predictions(){
-    mPredictions = new ArrayList<String>();
-//        setUpPredictions();
+        mBadPredictions = new ArrayList<String>();
+        setUpBadPredictions();
+        mMediocrePredictions = new ArrayList<String>();
+        setUpMediocrePredictions();
+        mGoodPredictions = new ArrayList<String>();
+        setUpGoodPredictions();
     }
 
     public Predictions(ArrayList<String> alreadyPredicted){
-        mPredictions = new ArrayList<String>(alreadyPredicted);
+        mBadPredictions = new ArrayList<String>(alreadyPredicted);
+        mMediocrePredictions = new ArrayList<String>(alreadyPredicted);
+        mGoodPredictions = new ArrayList<String>(alreadyPredicted);
     }
 
-    public ArrayList<String> getPredictions(){
-        return new ArrayList<String>(mPredictions);
+    public ArrayList<String> getBadPredictions(){
+        return new ArrayList<String>(mBadPredictions);
     }
 
-    public void createPrediction(String prediction){
-        mPredictions.add(prediction);
+    public ArrayList<String> getMediocrePredictions(){
+        return new ArrayList<String>(mMediocrePredictions);
     }
 
-    public int getLength(){
-        return mPredictions.size();
+    public ArrayList<String> getGoodPredictions(){
+        return new ArrayList<String>(mGoodPredictions);
     }
 
-    public String getPredictionAtIndex(int index){
-        return mPredictions.get(index);
+    public void createBadPrediction(String badPrediction){
+        mBadPredictions.add(badPrediction);
     }
 
-    public String getPrediction(){
+    public void createMediocrePrediction(String mediocrePrediction){
+        mMediocrePredictions.add(mediocrePrediction);
+    }
+
+    public void createGoodPrediction(String goodPrediction){
+        mGoodPredictions.add(goodPrediction);
+    }
+
+    public int getBadPredictionsLength(){
+        return mBadPredictions.size();
+    }
+
+    public int getMediocrePredictionsLength(){
+        return mMediocrePredictions.size();
+    }
+
+    public int getGoodPredictionsLength(){
+        return mGoodPredictions.size();
+    }
+
+    public String getBadPredictionAtIndex(int index){
+        return mBadPredictions.get(index);
+    }
+
+    public String getMediocrePredictionAtIndex(int index){
+        return mMediocrePredictions.get(index);
+    }
+
+    public String getGoodPredictionAtIndex(int index){
+        return mGoodPredictions.get(index);
+    }
+
+    public String getBadPrediction(){
         Random rand = new Random();
-        int listSize = getLength();
+        int listSize = getBadPredictionsLength();
         int index = rand.nextInt(listSize);
-        String prediction = getPredictionAtIndex(index);
+        String prediction = getBadPredictionAtIndex(index);
         return prediction;
     }
 
+    public String getMediocrePrediction(){
+        Random rand = new Random();
+        int listSize = getMediocrePredictionsLength();
+        int index = rand.nextInt(listSize);
+        String prediction = getMediocrePredictionAtIndex(index);
+        return prediction;
+    }
+
+    public String getGoodPrediction(){
+        Random rand = new Random();
+        int listSize = getGoodPredictionsLength();
+        int index = rand.nextInt(listSize);
+        String prediction = getGoodPredictionAtIndex(index);
+        return prediction;
+    }
+
+    private void setUpBadPredictions() {
+
+        String[] badPredictions = {
+                "Shoo Human",
+                "That is irrelevant",
+                "I will eat your face."
+        };
+
+        for (String badPrediction : badPredictions) {
+            mBadPredictions.add(badPrediction);
+        }
+    }
+
+    private void setUpMediocrePredictions() {
+
+        String[] mediocrePredictions = {
+                "It's hard to tell when I'm still hungry",
+                "Maybe a beer would help me think",
+                "I like the taste of donuts."
+        };
+
+        for (String mediocrePrediction : mediocrePredictions) {
+            mMediocrePredictions.add(mediocrePrediction);
+        }
+    }
+
+    private void setUpGoodPredictions() {
+
+        String[] goodPredictions = {
+                "I would assume that this is possible",
+                "Sure, why not.",
+                "You are very nice."
+        };
+
+        for (String goodPrediction : goodPredictions) {
+            mGoodPredictions.add(goodPrediction);
+        }
+    }
 
 
 }

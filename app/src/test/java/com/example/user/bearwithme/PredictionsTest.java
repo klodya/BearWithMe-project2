@@ -14,47 +14,69 @@ import static junit.framework.Assert.assertNotNull;
 
 public class PredictionsTest {
 
-    ArrayList<String> testPredictions1;
-//    ArrayList<String> testPredictions2;
-//    ArrayList<String> testPredictions3;
 
     @Before
     public void before(){
-        testPredictions1 = new ArrayList<String>();
-        testPredictions1.add("That sounds awful");
-        testPredictions1.add("No. Go away.");
-        testPredictions1.add("I will eat your face!");
     }
 
     @Test
-    public void canGetPrediction(){
+    public void canGetBadPrediction(){
         Predictions predictions = new Predictions();
-        assertNotNull(predictions.getPredictions());
+        assertNotNull(predictions.getBadPredictions());
     }
 
     @Test
-    public void canCountPredictions(){
-        Predictions predictions = new Predictions(testPredictions1);
-        assertEquals(3, predictions.getLength());
+    public void canGetMediocrePrediction(){
+        Predictions predictions = new Predictions();
+        assertNotNull(predictions.getMediocrePredictions());
     }
 
     @Test
-    public void getPredictionAtIndex(){
-        Predictions predictions = new Predictions(testPredictions1);
-        String result = predictions.getPredictionAtIndex(0);
-        assertEquals("That sounds awful", result);
+    public void canGetGoodPrediction(){
+        Predictions predictions = new Predictions();
+        assertNotNull(predictions.getGoodPredictions());
     }
 
     @Test
-    public void addNewPrediction(){
+    public void canCountBadPredictions(){
+        Predictions predictions = new Predictions();
+        assertEquals(3, predictions.getBadPredictionsLength());
+    }
+
+    @Test
+    public void getBadPredictionAtIndex(){
+        Predictions predictions = new Predictions();
+        String result = predictions.getBadPredictionAtIndex(0);
+        assertEquals("Shoo Human", result);
+    }
+
+    @Test
+    public void addNewBadPrediction(){
         Predictions predictions = new Predictions();
 
-        int originalPredictions = predictions.getLength();
-        predictions.createPrediction("Never ever will that happen.");
+        int originalPredictions = predictions.getBadPredictionsLength();
+        predictions.createBadPrediction("Never ever will that happen.");
 
-        assertEquals(originalPredictions + 1, predictions.getLength());
+        assertEquals(originalPredictions + 1, predictions.getBadPredictionsLength());
     }
 
+    @Test
+    public void addNewMediocrePrediction(){
+        Predictions predictions = new Predictions();
 
+        int originalPredictions = predictions.getMediocrePredictionsLength();
+        predictions.createMediocrePrediction("Do you have donuts with sprinkles?");
 
+        assertEquals(originalPredictions + 1, predictions.getMediocrePredictionsLength());
+    }
+
+    @Test
+    public void addNewGoodPrediction(){
+        Predictions predictions = new Predictions();
+
+        int originalPredictions = predictions.getGoodPredictionsLength();
+        predictions.createGoodPrediction("Fabulous idea Darling.");
+
+        assertEquals(originalPredictions + 1, predictions.getGoodPredictionsLength());
+    }
 }

@@ -19,9 +19,6 @@ public class BearTest {
     Donut donut;
     CheeseBurger cheeseBurger;
 
-    ArrayList<String> testPredictions1;
-    ArrayList<String> testPredictions2;
-    ArrayList<String> testPredictions3;
 
 
     @Before
@@ -30,13 +27,6 @@ public class BearTest {
         beer = new Beer();
         donut = new Donut();
         cheeseBurger = new CheeseBurger();
-
-        testPredictions1 = new ArrayList<String>();
-        testPredictions1.add("Shoo Human");
-        testPredictions2 = new ArrayList<String>();
-        testPredictions2.add("It is potentially possible");
-        testPredictions3 = new ArrayList<String>();
-        testPredictions3.add("Sure, why not!");
     }
 
     @Test
@@ -104,8 +94,9 @@ public class BearTest {
     @Test
     public void bearCanPredictBellyFull(){
         brownBear.feedBear(cheeseBurger);
-        brownBear.feedBear(beer);
         brownBear.feedBear(donut);
+        brownBear.feedBear(beer);
+        brownBear.feedBear(beer);
         assertEquals("Sure, why not!", brownBear.bearPredicts());
     }
 
