@@ -104,4 +104,10 @@ public class BearTest {
         assertEquals("Sure, why not.", brownBear.bearPredicts());
     }
 
+    @Test
+    public void bearCanPredictDrunk(){
+        brownBear.feedBear(beer);
+        assertEquals("Ooft...BURP..*hic*", brownBear.bearPredicts());
+    }
+
 }

@@ -17,6 +17,7 @@ public abstract class Bear {
     Predictions mBadPredictions;
     Predictions mMediocrePredictions;
     Predictions mGoodPredictions;
+    Predictions mDrunkPredictions;
 
     public Bear(String type, String name, ArrayList<Feedable> belly){
         this.type = type;
@@ -72,19 +73,18 @@ public abstract class Bear {
         return true;
     }
 
-
     public String bearPredicts() {
         if (bellyCount() == 0) {
             return mBadPredictions.getBadPrediction();
+        }
+        if (drunk() == true){
+            return mDrunkPredictions.getDrunkPrediction();
         }
         if (bellyCount() < 3) {
             return mMediocrePredictions.getMediocrePrediction();
         }
         if(bellyCount() >= 3) {
             return mGoodPredictions.getGoodPrediction();
-        }
-        if (drunk() == true){
-            return mDrunkPredictions.getDrunkPrediction();
         }
         return null;
     }
