@@ -1,11 +1,15 @@
 package com.example.user.bearwithme;
 
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.io.InputStream;
 
 /**
  * Created by user on 15/11/2016.
@@ -20,7 +24,7 @@ public class BrownBearActivity extends AppCompatActivity implements View.OnClick
     private Button mBeerButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brown_bear);
 
@@ -30,11 +34,19 @@ public class BrownBearActivity extends AppCompatActivity implements View.OnClick
         mCheeseBurgerButton = (Button) findViewById(R.id.cheeseburger);
         mBeerButton = (Button) findViewById(R.id.beer);
 
+        mPredictButton.setOnClickListener(this);
+        mDonutButton.setOnClickListener(this);
+        mCheeseBurgerButton.setOnClickListener(this);
+        mBeerButton.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view) {
+        String question = mQuestionEditText.getText().toString();
+
+        Resources res = getResources();
+        InputStream inputStream = res.openRawResource(R.raw.bad_predictions);
 
     }
 }
