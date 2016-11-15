@@ -10,6 +10,7 @@
     <string name="donut_button_text">Donut</string>
     <string name="cheeseburger_button_text">Cheeseburger</string>
     <string name="beer_button_text">Beer</string>
+    <string name="prediction_activity_label">Wise bear words..</string>
 
 
 </resources>

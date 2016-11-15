@@ -2,6 +2,7 @@ package com.example.user.bearwithme;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.gesture.Prediction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  * Created by user on 15/11/2016.
  */
 
-public class BrownBearActivity extends AppCompatActivity implements View.OnClickListener {
+public class BrownBearActivity extends AppCompatActivity {
 
     private EditText mQuestionEditText;
     private Button mPredictButton;
@@ -26,7 +27,7 @@ public class BrownBearActivity extends AppCompatActivity implements View.OnClick
     private Bear pooky;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState){
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brown_bear);
 
@@ -51,23 +52,19 @@ public class BrownBearActivity extends AppCompatActivity implements View.OnClick
         mCheeseBurgerButton = (Button) findViewById(R.id.cheeseburger);
         mBeerButton = (Button) findViewById(R.id.beer);
 
-        mPredictButton.setOnClickListener(this);
-        mDonutButton.setOnClickListener(this);
-        mCheeseBurgerButton.setOnClickListener(this);
-        mBeerButton.setOnClickListener(this);
-    }
+        mPredictButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String question = mQuestionEditText.getText().toString();
 
+                String prediction = pooky.bearPredicts();
 
-    @Override
-    public void onClick(View view) {
-        String question = mQuestionEditText.getText().toString();
+                Intent intent = new Intent(BrownBearActivity.this, PredictionActivity.class);
 
-        String prediction = pooky.bearPredicts();
+                intent.putExtra("prediction", prediction);
 
-        Intent intent = new Intent(BrownBearActivity.this, PredictionActivity.class);
-
-        intent.putExtra("prediction", prediction);
-
-        startActivity(intent);
+                startActivity(intent);
+            }
+        });
     }
 }

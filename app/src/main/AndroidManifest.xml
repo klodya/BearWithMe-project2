@@ -22,7 +22,11 @@
         <activity android:name=".BrownBearActivity"
             android:label="@string/brown_bear_activity_label"
             android:parentActivityName=".BearWithMe">
+        </activity>
 
+        <activity android:name=".PredictionActivity"
+            android:label="@string/prediction_activity_label"
+            android:parentActivityName=".BrownBearActivity">
         </activity>
 
     </application>

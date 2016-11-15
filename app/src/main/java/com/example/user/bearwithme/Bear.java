@@ -18,21 +18,25 @@ public abstract class Bear {
     Predictions mGoodPredictions;
     Predictions mDrunkPredictions;
 
-    public Bear(String type, String name, ArrayList<Feedable> belly){
+    public Bear(String type, String name, ArrayList<Feedable> belly) {
         this.type = type;
         this.name = name;
         this.mBelly = new ArrayList<>();
         this.mBadPredictions = new Predictions();
+        setUpBadPredictions();
         this.mMediocrePredictions = new Predictions();
+        setUpMediocrePredictions();
         this.mGoodPredictions = new Predictions();
+        setUpGoodPredictions();
         this.mDrunkPredictions = new Predictions();
+        setUpDrunkPredictions();
     }
 
-    public String type(){
+    public String type() {
         return this.type;
     }
 
-    public String name(){
+    public String name() {
         return this.name;
     }
 
@@ -40,22 +44,22 @@ public abstract class Bear {
         this.name = name;
     }
 
-    public void feedBear(Feedable food){
+    public void feedBear(Feedable food) {
         this.mBelly.add(food);
     }
 
-    public int bellyCount(){
+    public int bellyCount() {
         return this.mBelly.size();
     }
 
-    public Feedable diet(){
+    public Feedable diet() {
         if (bellyCount() > 0) {
             return mBelly.remove(0);
         }
         return null;
     }
 
-    public void foodComa(){
+    public void foodComa() {
         this.mBelly.clear();
     }
 
@@ -64,7 +68,7 @@ public abstract class Bear {
             return false;
         }
 
-        for (Feedable item : mBelly){
+        for (Feedable item : mBelly) {
             if (item.feedableType() != "Beer") {
                 return false;
             }
@@ -74,17 +78,69 @@ public abstract class Bear {
 
     public String bearPredicts() {
         if (bellyCount() == 0) {
-            return mBadPredictions.getBadPrediction();
+            return mBadPredictions.getPrediction();
         }
-        if (drunk() == true){
-            return mDrunkPredictions.getDrunkPrediction();
+        if (drunk() == true) {
+            return mDrunkPredictions.getPrediction();
         }
         if (bellyCount() < 3) {
-            return mMediocrePredictions.getMediocrePrediction();
+            return mMediocrePredictions.getPrediction();
         }
-        if(bellyCount() >= 3) {
-            return mGoodPredictions.getGoodPrediction();
+        if (bellyCount() >= 3) {
+            return mGoodPredictions.getPrediction();
         }
         return null;
     }
+
+
+    private void setUpBadPredictions() {
+        String[] badPredictions = {
+                "Shoo Human",
+                "That is irrelevant",
+                "I will eat your face."
+        };
+
+        for (String badPrediction : badPredictions) {
+            mBadPredictions.createPrediction(badPrediction);
+        }
+    }
+//
+    private void setUpMediocrePredictions() {
+        String[] mediocrePredictions = {
+                "It's hard to tell when I'm still hungry",
+                "Maybe a beer would help me think",
+                "I like the taste of donuts."
+        };
+
+        for (String mediocrePrediction : mediocrePredictions) {
+            mMediocrePredictions.createPrediction(mediocrePrediction);
+        }
+    }
+
+    private void setUpGoodPredictions() {
+
+        String[] goodPredictions = {
+                "I would assume that this is possible",
+                "Sure, why not.",
+                "You are very nice."
+        };
+
+        for (String goodPrediction : goodPredictions) {
+            mGoodPredictions.createPrediction(goodPrediction);
+        }
+    }
+
+    private void setUpDrunkPredictions(){
+        String[] drunkPredictions = {
+                "ooh *hic* that sure..sounds..*hic*",
+                "Ooft...BURP..*hic*",
+                "Where my honeyz at?!"
+        };
+
+        for (String drunkPrediction : drunkPredictions){
+            mDrunkPredictions.createPrediction(drunkPrediction);
+        }
+    }
+
 }
+

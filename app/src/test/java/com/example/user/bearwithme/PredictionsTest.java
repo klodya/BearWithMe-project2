@@ -13,69 +13,35 @@ public class PredictionsTest {
 
 
     @Test
-    public void canGetBadPrediction(){
+    public void canGetPrediction(){
         Predictions predictions = new Predictions();
-        assertNotNull(predictions.getBadPredictions());
+        assertNotNull(predictions.getPredictions());
     }
 
     @Test
-    public void canGetMediocrePrediction(){
+    public void canCountPredictions(){
         Predictions predictions = new Predictions();
-        assertNotNull(predictions.getMediocrePredictions());
-    }
-
-    @Test
-    public void canGetGoodPrediction(){
-        Predictions predictions = new Predictions();
-        assertNotNull(predictions.getGoodPredictions());
+        assertEquals(3, predictions.getPredictionsLength());
     }
 
 
 
     @Test
-    public void canCountBadPredictions(){
+    public void getPredictionAtIndex(){
         Predictions predictions = new Predictions();
-        assertEquals(3, predictions.getBadPredictionsLength());
-    }
-
-
-
-    @Test
-    public void getBadPredictionAtIndex(){
-        Predictions predictions = new Predictions();
-        String result = predictions.getBadPredictionAtIndex(0);
+        String result = predictions.getPredictionAtIndex(0);
         assertEquals("Shoo Human", result);
     }
-
-
-
-    @Test
-    public void addNewBadPrediction(){
-        Predictions predictions = new Predictions();
-
-        int originalPredictions = predictions.getBadPredictionsLength();
-        predictions.createBadPrediction("Never ever will that happen.");
-
-        assertEquals(originalPredictions + 1, predictions.getBadPredictionsLength());
-    }
+    
 
     @Test
-    public void addNewMediocrePrediction(){
+    public void addPrediction(){
         Predictions predictions = new Predictions();
 
-        int originalPredictions = predictions.getMediocrePredictionsLength();
-        predictions.createMediocrePrediction("Do you have donuts with sprinkles?");
+        int originalPredictions = predictions.getPredictionsLength();
+        predictions.createPrediction("Never ever will that happen.");
 
-        assertEquals(originalPredictions + 1, predictions.getMediocrePredictionsLength());
+        assertEquals(originalPredictions + 1, predictions.getPredictionsLength());
     }
 
-    @Test
-    public void addNewGoodPrediction(){
-        Predictions predictions = new Predictions();
-
-        int originalPredictions = predictions.getGoodPredictionsLength();
-        predictions.createGoodPrediction("Fabulous idea Darling.");
-
-        assertEquals(originalPredictions + 1, predictions.getGoodPredictionsLength());
-    }
 }
