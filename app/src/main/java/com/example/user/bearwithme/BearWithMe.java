@@ -40,5 +40,4 @@ public class BearWithMe extends AppCompatActivity implements View.OnClickListene
         }
         startActivity(intent);
     }
-
 }

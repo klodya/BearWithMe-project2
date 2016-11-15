@@ -1,9 +1,6 @@
 package com.example.user.bearwithme;
 
-import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;

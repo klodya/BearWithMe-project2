@@ -17,21 +17,12 @@ public class Predictions {
 
     public Predictions(){
         mBadPredictions = new ArrayList<>();
-        setUpBadPredictions();
+//        setUpBadPredictions();
         mMediocrePredictions = new ArrayList<>();
-        setUpMediocrePredictions();
+//        setUpMediocrePredictions();
         mGoodPredictions = new ArrayList<>();
-        setUpGoodPredictions();
+//        setUpGoodPredictions();
         mDrunkPredictions = new ArrayList<>();
-        setUpDrunkPredictions();
-    }
-
-    public Predictions(ArrayList<String> alreadyPredicted){
-        mBadPredictions = new ArrayList<>(alreadyPredicted);
-        mMediocrePredictions = new ArrayList<>(alreadyPredicted);
-        mGoodPredictions = new ArrayList<>(alreadyPredicted);
-        mDrunkPredictions = new ArrayList<>(alreadyPredicted);
-
     }
 
     public ArrayList<String> getBadPredictions(){
@@ -188,6 +179,7 @@ public class Predictions {
             mDrunkPredictions.add(drunkPrediction);
         }
     }
+
 }
 
 

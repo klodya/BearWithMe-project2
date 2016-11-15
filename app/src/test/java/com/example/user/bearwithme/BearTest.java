@@ -22,7 +22,7 @@ public class BearTest {
 
     @Before
     public void before(){
-        brownBear = new BrownBear("Brown", "Pooky", mBelly);
+        brownBear = new BrownBear("Brown", "Pooky", mBelly, predictions);
         beer = new Beer();
         donut = new Donut();
         cheeseBurger = new CheeseBurger();
