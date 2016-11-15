@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
 
-    <item android:id="@+id/action_feed_bear_donut"
+    <tem android:id="@+id/action_feed_bear_donut"
         android:title="@string/say_donut_text"
         />
 

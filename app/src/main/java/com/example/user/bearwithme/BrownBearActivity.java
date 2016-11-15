@@ -1,5 +1,6 @@
 package com.example.user.bearwithme;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.gesture.Prediction;
@@ -44,10 +45,12 @@ public class BrownBearActivity extends AppCompatActivity {
         TextFilePredictions good = new TextFilePredictions(goodInput);
         TextFilePredictions mediocre = new TextFilePredictions(mediocreInput);
 
+//        Predictable predictionsGenerator = new Predictions(InputStream)
+
         Predictions predictions = new Predictions();
         pooky = new BrownBear("Pooky", "Brown", predictions);
 
-         ArrayList<Feedable> mBelly = new ArrayList<>();
+        ArrayList<Feedable> mBelly = new ArrayList<>();
 
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
@@ -70,11 +73,15 @@ public class BrownBearActivity extends AppCompatActivity {
             }
         });
 
+
+
         mDonutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Donut donut = new Donut();
                 pooky.feedBear(donut);
+
+                Toast.makeText(BrownBearActivity.this, R.string.say_donut_text, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -83,7 +90,12 @@ public class BrownBearActivity extends AppCompatActivity {
             public void onClick(View view) {
                 CheeseBurger cheeseBurger = new CheeseBurger();
                 pooky.feedBear(cheeseBurger);
+
+                Toast.makeText(BrownBearActivity.this, R.string.say_cheeseburger_text, Toast.LENGTH_SHORT).show();
+
             }
+
+
         });
 
         mBeerButton.setOnClickListener(new View.OnClickListener() {
@@ -91,29 +103,11 @@ public class BrownBearActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Beer beer = new Beer();
                 pooky.feedBear(beer);
+
+                Toast.makeText(BrownBearActivity.this, R.string.say_beer_text, Toast.LENGTH_SHORT).show();
+
             }
         });
 
-            @Override
-            public boolean onOptionsItemSelected(){
-            if (item.getItemId() == R.id.action_feed_bear_donut) {
-
-                Toast.makeText(this, R.string.say_donut_text, Toast.LENGTH_SHORT).show();
-                return true;
-            }
-
-            if (item.getItemId() == R.id.action_feed_bear_cheeseburger) {
-
-                Toast.makeText(this, R.string.say_cheeseburger_text, Toast.LENGTH_SHORT).show();
-                return true;
-            }
-
-            if (item.getItemId() == R.id.action_feed_bear_beer) {
-
-                Toast.makeText(this, R.string.say_beer_text, Toast.LENGTH_SHORT).show();
-                return true;
-            }
-            return super.onOptionsItemSelected(item);
-        }
     }
 }
