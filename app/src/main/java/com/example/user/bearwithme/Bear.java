@@ -1,6 +1,5 @@
 package com.example.user.bearwithme;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -22,7 +21,7 @@ public abstract class Bear {
     public Bear(String type, String name, ArrayList<Feedable> belly){
         this.type = type;
         this.name = name;
-        this.mBelly = new ArrayList<Feedable>();
+        this.mBelly = new ArrayList<>();
         this.mBadPredictions = new Predictions();
         this.mMediocrePredictions = new Predictions();
         this.mGoodPredictions = new Predictions();

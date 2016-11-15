@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">BearWithMe</string>
+    <string name="brown_bear_button_text">Brown Bear</string>
+    <string name="black_bear_button_text">Black Bear</string>
+    <string name="welcome_message">Pick your bear!</string>
+    <string name="question">What is your question human?</string>
+    <string name="predict_button_text">Predict bear!</string>
+    <string name="food_message">Please feed the bear</string>
+    <string name="donut_button_text">Donut</string>
+    <string name="cheeseburger_button_text">Cheeseburger</string>
+    <string name="beer_button_text">Beer</string>
+
+
 </resources>

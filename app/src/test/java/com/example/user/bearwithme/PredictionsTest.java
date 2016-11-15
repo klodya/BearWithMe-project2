@@ -15,10 +15,6 @@ import static junit.framework.Assert.assertNotNull;
 public class PredictionsTest {
 
 
-    @Before
-    public void before(){
-    }
-
     @Test
     public void canGetBadPrediction(){
         Predictions predictions = new Predictions();
@@ -37,11 +33,15 @@ public class PredictionsTest {
         assertNotNull(predictions.getGoodPredictions());
     }
 
+
+
     @Test
     public void canCountBadPredictions(){
         Predictions predictions = new Predictions();
         assertEquals(3, predictions.getBadPredictionsLength());
     }
+
+
 
     @Test
     public void getBadPredictionAtIndex(){
@@ -49,6 +49,8 @@ public class PredictionsTest {
         String result = predictions.getBadPredictionAtIndex(0);
         assertEquals("Shoo Human", result);
     }
+
+
 
     @Test
     public void addNewBadPrediction(){

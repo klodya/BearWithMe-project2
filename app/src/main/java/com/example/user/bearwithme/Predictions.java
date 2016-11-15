@@ -16,38 +16,38 @@ public class Predictions {
 
 
     public Predictions(){
-        mBadPredictions = new ArrayList<String>();
+        mBadPredictions = new ArrayList<>();
         setUpBadPredictions();
-        mMediocrePredictions = new ArrayList<String>();
+        mMediocrePredictions = new ArrayList<>();
         setUpMediocrePredictions();
-        mGoodPredictions = new ArrayList<String>();
+        mGoodPredictions = new ArrayList<>();
         setUpGoodPredictions();
-        mDrunkPredictions = new ArrayList<String>();
+        mDrunkPredictions = new ArrayList<>();
         setUpDrunkPredictions();
     }
 
     public Predictions(ArrayList<String> alreadyPredicted){
-        mBadPredictions = new ArrayList<String>(alreadyPredicted);
-        mMediocrePredictions = new ArrayList<String>(alreadyPredicted);
-        mGoodPredictions = new ArrayList<String>(alreadyPredicted);
-        mDrunkPredictions = new ArrayList<String>(alreadyPredicted);
+        mBadPredictions = new ArrayList<>(alreadyPredicted);
+        mMediocrePredictions = new ArrayList<>(alreadyPredicted);
+        mGoodPredictions = new ArrayList<>(alreadyPredicted);
+        mDrunkPredictions = new ArrayList<>(alreadyPredicted);
 
     }
 
     public ArrayList<String> getBadPredictions(){
-        return new ArrayList<String>(mBadPredictions);
+        return new ArrayList<>(mBadPredictions);
     }
 
     public ArrayList<String> getMediocrePredictions(){
-        return new ArrayList<String>(mMediocrePredictions);
+        return new ArrayList<>(mMediocrePredictions);
     }
 
     public ArrayList<String> getGoodPredictions(){
-        return new ArrayList<String>(mGoodPredictions);
+        return new ArrayList<>(mGoodPredictions);
     }
 
     public ArrayList<String> getDrunkPredictions(){
-        return new ArrayList<String>(mDrunkPredictions);
+        return new ArrayList<>(mDrunkPredictions);
     }
 
 
@@ -188,7 +188,6 @@ public class Predictions {
             mDrunkPredictions.add(drunkPrediction);
         }
     }
-
 }
 
 
