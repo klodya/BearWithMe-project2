@@ -45,8 +45,6 @@ public class BrownBearActivity extends AppCompatActivity {
         TextFilePredictions good = new TextFilePredictions(goodInput);
         TextFilePredictions mediocre = new TextFilePredictions(mediocreInput);
 
-//        Predictable predictionsGenerator = new Predictions(InputStream)
-
         Predictions predictions = new Predictions();
         pooky = new BrownBear("Pooky", "Brown", predictions);
 

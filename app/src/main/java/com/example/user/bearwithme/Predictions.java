@@ -9,7 +9,7 @@ import java.util.Random;
  * Created by user on 13/11/2016.
  */
 
-public class Predictions implements Predictable {
+public class Predictions {
 
     protected ArrayList<String> mPredictions;
 
