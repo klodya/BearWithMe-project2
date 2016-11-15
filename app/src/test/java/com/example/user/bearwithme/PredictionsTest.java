@@ -2,6 +2,7 @@ package com.example.user.bearwithme;
 
 import org.junit.Test;
 
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
@@ -21,7 +22,9 @@ public class PredictionsTest {
     @Test
     public void canCountPredictions(){
         Predictions predictions = new Predictions();
-        assertEquals(3, predictions.getPredictionsLength());
+        predictions.createPrediction("Shoo human!");
+
+        assertEquals(1, predictions.getPredictionsLength());
     }
 
 
@@ -29,10 +32,12 @@ public class PredictionsTest {
     @Test
     public void getPredictionAtIndex(){
         Predictions predictions = new Predictions();
+        predictions.createPrediction("Shoo human!");
+
         String result = predictions.getPredictionAtIndex(0);
-        assertEquals("Shoo Human", result);
+        assertEquals("Shoo human!", result);
     }
-    
+
 
     @Test
     public void addPrediction(){
