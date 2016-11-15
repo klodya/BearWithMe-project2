@@ -11,6 +11,9 @@
     <string name="cheeseburger_button_text">Cheeseburger</string>
     <string name="beer_button_text">Beer</string>
     <string name="prediction_activity_label">Wise bear words..</string>
+    <string name="say_donut_text"> you fed the bear a donut!</string>
+    <string name="say_cheeseburger_text"> you fed the bear a cheeseburger!</string>
+    <string name="say_beer_text"> you fed the bear beer!</string>
 
 
 </resources>

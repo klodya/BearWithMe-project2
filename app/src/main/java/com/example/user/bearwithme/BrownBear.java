@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class BrownBear extends Bear {
 
-    public BrownBear(String type, String name, ArrayList<Feedable> belly, Predictions predictions){
-        super(type, name, belly);
+    public BrownBear(String type, String name, Predictions predictions){
+        super(type, name);
 
     }
 

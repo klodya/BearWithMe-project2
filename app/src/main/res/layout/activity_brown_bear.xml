@@ -47,4 +47,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
 
+    <item android:id="@+id/action_feed_bear_donut"
+        android:title="@string/say_donut_text"
+        />
+
+    <item android:id="@+id/action_feed_bear_cheeseburger"
+        android:title="@string/say_cheeseburger_text"
+        />
+
+    <item android:id="@+id/action_feed_bear_beer"
+        android:title="@string/say_beer_text"
+        />
+
 </LinearLayout>

@@ -18,7 +18,7 @@ public abstract class Bear {
     Predictions mGoodPredictions;
     Predictions mDrunkPredictions;
 
-    public Bear(String type, String name, ArrayList<Feedable> belly) {
+    public Bear(String type, String name) {
         this.type = type;
         this.name = name;
         this.mBelly = new ArrayList<>();

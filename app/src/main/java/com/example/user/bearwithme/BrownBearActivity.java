@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -44,7 +45,9 @@ public class BrownBearActivity extends AppCompatActivity {
         TextFilePredictions mediocre = new TextFilePredictions(mediocreInput);
 
         Predictions predictions = new Predictions();
-        pooky = new BrownBear("Pooky", "Brown", new ArrayList<Feedable>(), predictions);
+        pooky = new BrownBear("Pooky", "Brown", predictions);
+
+         ArrayList<Feedable> mBelly = new ArrayList<>();
 
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
@@ -66,5 +69,51 @@ public class BrownBearActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mDonutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Donut donut = new Donut();
+                pooky.feedBear(donut);
+            }
+        });
+
+        mCheeseBurgerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheeseBurger cheeseBurger = new CheeseBurger();
+                pooky.feedBear(cheeseBurger);
+            }
+        });
+
+        mBeerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Beer beer = new Beer();
+                pooky.feedBear(beer);
+            }
+        });
+
+            @Override
+            public boolean onOptionsItemSelected(){
+            if (item.getItemId() == R.id.action_feed_bear_donut) {
+
+                Toast.makeText(this, R.string.say_donut_text, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+            if (item.getItemId() == R.id.action_feed_bear_cheeseburger) {
+
+                Toast.makeText(this, R.string.say_cheeseburger_text, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+            if (item.getItemId() == R.id.action_feed_bear_beer) {
+
+                Toast.makeText(this, R.string.say_beer_text, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
     }
 }
