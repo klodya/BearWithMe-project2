@@ -45,7 +45,7 @@ public class BrownBearActivity extends AppCompatActivity {
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
         mDonutButton = (ImageButton) findViewById(R.id.donut);
-        mCheeseBurgerButton = (ImageButton) findViewById(R.id.cheeseburger);
+        mCheeseBurgerButton = (ImageButton) findViewById(R.id.burger);
         mBeerButton = (ImageButton) findViewById(R.id.beer);
 
         mPredictButton.setOnClickListener(new View.OnClickListener() {

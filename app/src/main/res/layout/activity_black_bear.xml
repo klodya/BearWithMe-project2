@@ -1,48 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/black_bear_fortune">
 
     <EditText
         android:id="@+id/question_text"
         android:hint="@string/question"
         android:textSize="25dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/predict"
-        android:text="@string/predict_button_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/question_text"
-        android:layout_centerHorizontal="true" />
-
-
-    <ImageButton
-        android:id="@+id/cocktail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_cocktail"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:id="@+id/cheese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_cheese"
-        android:layout_alignTop="@+id/cocktail"
-        android:layout_toLeftOf="@+id/predict"
-        android:layout_toStartOf="@+id/predict" />
 
     <TextView
         android:text="@string/food_message"
@@ -50,9 +20,9 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:id="@+id/textView2"
-        android:layout_marginBottom="14dp"
-        android:layout_above="@+id/cocktail"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/cheese"
+        android:layout_centerHorizontal="true"/>
+
 
     <ImageButton
         android:id="@+id/book"
@@ -60,8 +30,36 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:src="@drawable/ic_book"
-        android:layout_alignTop="@+id/cocktail"
-        android:layout_toRightOf="@+id/predict"
-        android:layout_toEndOf="@+id/predict" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/cocktail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_cocktail"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_cheese"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:id="@+id/predict"
+        android:layout_width="90dp"
+        android:background="@android:color/transparent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
