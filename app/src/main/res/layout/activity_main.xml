@@ -6,6 +6,18 @@
     android:orientation="vertical"
     android:background="@drawable/bear_home_page">
 
+    <TextView
+        android:text="@string/welcome_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="#302626"
+        android:textAlignment="center"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="78dp" />
 
     <Button
         android:id="@+id/brownBear"
@@ -15,12 +27,12 @@
         android:background="#690000"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp"
-        android:layout_alignBaseline="@+id/blackBear"
-        android:layout_alignBottom="@+id/blackBear"
-        android:layout_toRightOf="@+id/blackBear"
-        android:layout_toEndOf="@+id/blackBear" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginBottom="19dp" />
 
     <Button
         android:id="@+id/blackBear"
@@ -30,25 +42,11 @@
         android:background="#690000"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="68dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="22dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="@string/welcome_message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:textColor="#302626"
-        android:textAlignment="center"
-        android:id="@+id/textView"
-        android:layout_above="@+id/brownBear"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="15dp" />
+        android:layout_alignTop="@+id/brownBear"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="72dp"
+        android:layout_marginEnd="72dp" />
 
 
 </RelativeLayout>
