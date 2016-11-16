@@ -24,9 +24,19 @@
             android:parentActivityName=".BearWithMe">
         </activity>
 
+        <activity android:name=".BlackBearActivity"
+            android:label="@string/black_bear_activity_label"
+            android:parentActivityName=".BearWithMe">
+        </activity>
+
         <activity android:name=".PredictionActivity"
             android:label="@string/prediction_activity_label"
             android:parentActivityName=".BrownBearActivity">
+        </activity>
+
+        <activity android:name=".PredictionActivityBlack"
+            android:label="@string/prediction_activity_label"
+            android:parentActivityName=".BlackBearActivity">
         </activity>
 
     </application>

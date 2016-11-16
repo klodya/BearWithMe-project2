@@ -63,7 +63,7 @@ public class BlackBearActivity extends AppCompatActivity {
 
                 String prediction = pooky.bearPredicts();
 
-                Intent intent = new Intent(BlackBearActivity.this, PredictionActivity.class);
+                Intent intent = new Intent(BlackBearActivity.this, PredictionActivityBlack.class);
 
                 intent.putExtra("prediction", prediction);
 

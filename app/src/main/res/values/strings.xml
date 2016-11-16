@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BearWithMe</string>
     <string name="brown_bear_activity_label">Brown Bear of Fortune</string>
+    <string name="black_bear_activity_label">Black Bear of Fortune</string>
     <string name="brown_bear_button_text">Brown Bear</string>
     <string name="black_bear_button_text">Black Bear</string>
     <string name="welcome_message">Pick your bear!</string>
