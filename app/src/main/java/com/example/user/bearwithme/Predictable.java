@@ -5,4 +5,5 @@ package com.example.user.bearwithme;
  */
 
 public interface Predictable {
+    String getPrediction();
 }

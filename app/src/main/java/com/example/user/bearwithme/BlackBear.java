@@ -8,8 +8,37 @@ import java.util.ArrayList;
 
 public class BlackBear extends Bear {
 
-    public BlackBear(String type, String name, Predictions predictions){
+    Predictable mBadPredictions;
+    Predictable mMediocrePredictions;
+    Predictable mGoodPredictions;
+    Predictable mDrunkPredictions;
+
+    public BlackBear(String type, String name){
         super(type, name);
+    }
+
+    public void setPredictions(Predictable bad, Predictable mediocre, Predictable good, Predictable drunk) {
+        mBadPredictions = bad;
+        mMediocrePredictions = mediocre;
+        mGoodPredictions = good;
+        mDrunkPredictions = drunk;
 
     }
+
+    public String bearPredicts() {
+        if (bellyCount() == 0) {
+            return mBadPredictions.getPrediction();
+        }
+        if (drunk() == true) {
+            return mDrunkPredictions.getPrediction();
+        }
+        if (bellyCount() < 3) {
+            return mMediocrePredictions.getPrediction();
+        }
+        if (bellyCount() >= 3) {
+            return mGoodPredictions.getPrediction();
+        }
+        return null;
+    }
+
 }

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Created by user on 15/11/2016.
  */
 
-public class TextFilePredictions {
+public class TextFilePredictions implements Predictable{
 
     private ArrayList<String> mPredictions;
     private Scanner mFileReader;

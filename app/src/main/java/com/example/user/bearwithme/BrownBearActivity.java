@@ -27,7 +27,7 @@ public class BrownBearActivity extends AppCompatActivity {
     private ImageButton mDonutButton;
     private ImageButton mCheeseBurgerButton;
     private ImageButton mBeerButton;
-    private Bear pooky;
+    private BrownBear pooky;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,18 +36,12 @@ public class BrownBearActivity extends AppCompatActivity {
 
         Resources res = getResources();
 
-        InputStream badInput = res.openRawResource(R.raw.bad_predictions);
-        InputStream drunkInput = res.openRawResource(R.raw.drunk_predictions);
-        InputStream mediocreInput = res.openRawResource(R.raw.mediocre_predictions);
-        InputStream goodInput = res.openRawResource(R.raw.good_predictions);
 
-        TextFilePredictions bad = new TextFilePredictions(badInput);
-        TextFilePredictions drunk = new TextFilePredictions(drunkInput);
-        TextFilePredictions good = new TextFilePredictions(goodInput);
-        TextFilePredictions mediocre = new TextFilePredictions(mediocreInput);
 
-        Predictions predictions = new Predictions();
-        pooky = new BrownBear("Pooky", "Brown", predictions);
+        pooky = new BrownBear("Pooky", "Brown");
+
+//        Predictions predictions = new Predictions();
+//        pooky = new BrownBear("Pooky", "Brown", predictions);
 
         ArrayList<Feedable> mBelly = new ArrayList<>();
 
