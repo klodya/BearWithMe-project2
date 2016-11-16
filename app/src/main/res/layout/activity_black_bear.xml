@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_beer"
+        android:src="@drawable/ic_cocktail"
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_donut"
+        android:src="@drawable/ic_cheese"
         android:layout_alignTop="@+id/cocktail"
         android:layout_toLeftOf="@+id/predict"
         android:layout_toStartOf="@+id/predict" />
@@ -55,11 +55,11 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:id="@+id/grapes"
+        android:id="@+id/book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_burger"
+        android:src="@drawable/ic_book"
         android:layout_alignTop="@+id/cocktail"
         android:layout_toRightOf="@+id/predict"
         android:layout_toEndOf="@+id/predict" />

@@ -23,7 +23,7 @@ public class BlackBearActivity extends AppCompatActivity {
     private EditText mQuestionEditText;
     private Button mPredictButton;
     private ImageButton mCheeseButton;
-    private ImageButton mGrapesButton;
+    private ImageButton mBookButton;
     private ImageButton mCocktailButton;
     private BlackBear theodore;
 
@@ -53,7 +53,7 @@ public class BlackBearActivity extends AppCompatActivity {
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
         mCheeseButton = (ImageButton) findViewById(R.id.cheese);
-        mGrapesButton = (ImageButton) findViewById(R.id.grapes);
+        mBookButton = (ImageButton) findViewById(R.id.book);
         mCocktailButton = (ImageButton) findViewById(R.id.cocktail);
 
         mPredictButton.setOnClickListener(new View.OnClickListener() {
@@ -83,13 +83,13 @@ public class BlackBearActivity extends AppCompatActivity {
             }
         });
 
-        mGrapesButton.setOnClickListener(new View.OnClickListener() {
+        mBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Grapes grapes = new Grapes();
-                theodore.feedBear(grapes);
+                Book books = new Book();
+                theodore.feedBear(books);
 
-                Toast.makeText(BlackBearActivity.this, R.string.say_grapes_text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlackBearActivity.this, R.string.say_book_text, Toast.LENGTH_SHORT).show();
             }
         });
 

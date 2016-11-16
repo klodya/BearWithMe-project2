@@ -45,9 +45,16 @@ public class BrownBear extends Bear {
 
     private void setUpBadPredictions() {
         String[] badPredictions = {
-                "Shoo Human",
                 "That is irrelevant",
-                "I will eat your face."
+                "I will eat your face.",
+                "Shoo meat sack.",
+                "I have no time for you.",
+                "Shut up, you’ll never be the man your mother is.",
+                "Rotting bodies are less offensive than your questions.",
+                "Only disappointment awaits.",
+                "No! Drink the bleach!",
+                "You are a meat popsicle.",
+                "Sorry that was my stomach."
         };
 
         for (String badPrediction : badPredictions) {
@@ -59,7 +66,14 @@ public class BrownBear extends Bear {
         String[] mediocrePredictions = {
                 "It's hard to tell when I'm still hungry",
                 "Maybe a beer would help me think",
-                "I like the taste of donuts."
+                "I like the taste of donuts.",
+                "Extra melty cheese is not optional.",
+                "I can smell those burgers from here.",
+                "Why would you ask me that?",
+                "I could ask you the same thing.",
+                "Is that really worth asking?",
+                "I am JUST a bear.",
+                "I do not know what that means, and I won't respond to it."
         };
 
         for (String mediocrePrediction : mediocrePredictions) {
@@ -72,7 +86,15 @@ public class BrownBear extends Bear {
         String[] goodPredictions = {
                 "I would assume that this is possible",
                 "Sure, why not.",
-                "You are very nice."
+                "You are very nice.",
+                "But of course you should!",
+                "Here take all my money!",
+                "You have my full support.",
+                "You’re so cool!",
+                "I would agree with that.",
+                "I’m up for whatever.",
+                "Absolutely.",
+                "Without a doubt.",
         };
 
         for (String goodPrediction : goodPredictions) {
@@ -84,7 +106,13 @@ public class BrownBear extends Bear {
         String[] drunkPredictions = {
                 "ooh *hic* that sure..sounds..*hic*",
                 "Ooft...BURP..*hic*",
-                "Where my honeyz at?!"
+                "Where my honeyz at?!",
+                "You *hic* are..yes you are..my best bestest bestiest pal ever. FOREVER.",
+                "Bear is currently unavailable.",
+                "Bear has collapsed in a drunken heap.",
+                "Bear is too drunk to reply.",
+                "Bear has passed out.",
+                "I think…that..no. Wait. Ok. Do that. It will…possible yes."
         };
 
         for (String drunkPrediction : drunkPredictions){

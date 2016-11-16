@@ -13,7 +13,7 @@
     <string name="say_cheeseburger_text"> you fed the bear a cheeseburger!</string>
     <string name="say_beer_text"> you fed the bear beer!</string>
     <string name="say_cheese_text"> you fed the bear cheese!</string>
-    <string name="say_grapes_text"> you fed the bear grapes!</string>
+    <string name="say_book_text"> you fed the bear a book!</string>
     <string name="say_cocktail_text"> you fed the bear a cocktail!</string>
 
 </resources>
