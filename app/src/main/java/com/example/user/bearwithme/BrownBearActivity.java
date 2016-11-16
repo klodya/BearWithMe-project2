@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.InputStream;
@@ -23,9 +24,9 @@ public class BrownBearActivity extends AppCompatActivity {
 
     private EditText mQuestionEditText;
     private Button mPredictButton;
-    private Button mDonutButton;
-    private Button mCheeseBurgerButton;
-    private Button mBeerButton;
+    private ImageButton mDonutButton;
+    private ImageButton mCheeseBurgerButton;
+    private ImageButton mBeerButton;
     private Bear pooky;
 
     @Override
@@ -52,9 +53,9 @@ public class BrownBearActivity extends AppCompatActivity {
 
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
-        mDonutButton = (Button) findViewById(R.id.donut);
-        mCheeseBurgerButton = (Button) findViewById(R.id.cheeseburger);
-        mBeerButton = (Button) findViewById(R.id.beer);
+        mDonutButton = (ImageButton) findViewById(R.id.donut);
+        mCheeseBurgerButton = (ImageButton) findViewById(R.id.cheeseburger);
+        mBeerButton = (ImageButton) findViewById(R.id.beer);
 
         mPredictButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,10 +91,7 @@ public class BrownBearActivity extends AppCompatActivity {
                 pooky.feedBear(cheeseBurger);
 
                 Toast.makeText(BrownBearActivity.this, R.string.say_cheeseburger_text, Toast.LENGTH_SHORT).show();
-
             }
-
-
         });
 
         mBeerButton.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +101,6 @@ public class BrownBearActivity extends AppCompatActivity {
                 pooky.feedBear(beer);
 
                 Toast.makeText(BrownBearActivity.this, R.string.say_beer_text, Toast.LENGTH_SHORT).show();
-
             }
         });
 

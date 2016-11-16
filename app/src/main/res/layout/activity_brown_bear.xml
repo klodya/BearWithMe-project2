@@ -36,16 +36,6 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:id="@+id/cheeseburger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_burger"
-        android:layout_alignTop="@+id/beer"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
-
-    <ImageButton
         android:id="@+id/donut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,11 +49,21 @@
         android:text="@string/food_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="27dp"
+        android:textSize="30dp"
         android:id="@+id/textView2"
         android:layout_marginBottom="14dp"
         android:layout_above="@+id/beer"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/cheeseburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_burger"
+        android:layout_alignTop="@+id/beer"
+        android:layout_toRightOf="@+id/predict"
+        android:layout_toEndOf="@+id/predict" />
 
 
 </RelativeLayout>
