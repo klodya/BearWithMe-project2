@@ -22,10 +22,10 @@ public class BlackBearActivity extends AppCompatActivity {
 
     private EditText mQuestionEditText;
     private Button mPredictButton;
-    private ImageButton mDonutButton;
-    private ImageButton mCheeseBurgerButton;
-    private ImageButton mBeerButton;
-    private BlackBear pooky;
+    private ImageButton mCheeseButton;
+    private ImageButton mGrapesButton;
+    private ImageButton mCocktailButton;
+    private BlackBear theodore;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,23 +45,23 @@ public class BlackBearActivity extends AppCompatActivity {
         TextFilePredictions mediocre = new TextFilePredictions(mediocreInput);
 
 
-        pooky = new BlackBear("Pooky", "Brown");
-        pooky.setPredictions(bad, mediocre, good, drunk);
+        theodore = new BlackBear("Pooky", "Brown");
+        theodore.setPredictions(bad, mediocre, good, drunk);
 
         ArrayList<Feedable> mBelly = new ArrayList<>();
 
         mQuestionEditText = (EditText) findViewById(R.id.question_text);
         mPredictButton = (Button) findViewById(R.id.predict);
-        mDonutButton = (ImageButton) findViewById(R.id.donut);
-        mCheeseBurgerButton = (ImageButton) findViewById(R.id.cheeseburger);
-        mBeerButton = (ImageButton) findViewById(R.id.beer);
+        mCheeseButton = (ImageButton) findViewById(R.id.cheese);
+        mGrapesButton = (ImageButton) findViewById(R.id.grapes);
+        mCocktailButton = (ImageButton) findViewById(R.id.cocktail);
 
         mPredictButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String question = mQuestionEditText.getText().toString();
 
-                String prediction = pooky.bearPredicts();
+                String prediction = theodore.bearPredicts();
 
                 Intent intent = new Intent(BlackBearActivity.this, PredictionActivityBlack.class);
 
@@ -73,33 +73,33 @@ public class BlackBearActivity extends AppCompatActivity {
 
 
 
-        mDonutButton.setOnClickListener(new View.OnClickListener() {
+        mCheeseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Donut donut = new Donut();
-                pooky.feedBear(donut);
+                Cheese cheese = new Cheese();
+               theodore.feedBear(cheese);
 
-                Toast.makeText(BlackBearActivity.this, R.string.say_donut_text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlackBearActivity.this, R.string.say_cheese_text, Toast.LENGTH_SHORT).show();
             }
         });
 
-        mCheeseBurgerButton.setOnClickListener(new View.OnClickListener() {
+        mGrapesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheeseBurger cheeseBurger = new CheeseBurger();
-                pooky.feedBear(cheeseBurger);
+                Grapes grapes = new Grapes();
+                theodore.feedBear(grapes);
 
-                Toast.makeText(BlackBearActivity.this, R.string.say_cheeseburger_text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlackBearActivity.this, R.string.say_grapes_text, Toast.LENGTH_SHORT).show();
             }
         });
 
-        mBeerButton.setOnClickListener(new View.OnClickListener() {
+        mCocktailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Beer beer = new Beer();
-                pooky.feedBear(beer);
+                theodore.feedBear(beer);
 
-                Toast.makeText(BlackBearActivity.this, R.string.say_beer_text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BlackBearActivity.this, R.string.say_cocktail_text, Toast.LENGTH_SHORT).show();
             }
         });
 

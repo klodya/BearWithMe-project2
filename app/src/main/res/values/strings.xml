@@ -8,13 +8,12 @@
     <string name="question">What is your question human?</string>
     <string name="predict_button_text">Predict bear!</string>
     <string name="food_message">Please feed the bear</string>
-    <string name="donut_button_text">Donut</string>
-    <string name="cheeseburger_button_text">Cheeseburger</string>
-    <string name="beer_button_text">Beer</string>
     <string name="prediction_activity_label">Wise bear words..</string>
     <string name="say_donut_text"> you fed the bear a donut!</string>
     <string name="say_cheeseburger_text"> you fed the bear a cheeseburger!</string>
     <string name="say_beer_text"> you fed the bear beer!</string>
-
+    <string name="say_cheese_text"> you fed the bear cheese!</string>
+    <string name="say_grapes_text"> you fed the bear grapes!</string>
+    <string name="say_cocktail_text"> you fed the bear a cocktail!</string>
 
 </resources>
