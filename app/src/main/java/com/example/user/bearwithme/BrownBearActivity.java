@@ -1,9 +1,7 @@
 package com.example.user.bearwithme;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.gesture.Prediction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 
 /**

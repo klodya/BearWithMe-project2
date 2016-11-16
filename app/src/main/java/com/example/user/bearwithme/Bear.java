@@ -62,7 +62,7 @@ public abstract class Bear {
         }
 
         for (Feedable item : mBelly) {
-            if (item.feedableType() != "Beer") {
+            if (item.feedableType() != "Booze") {
                 return false;
             }
         }

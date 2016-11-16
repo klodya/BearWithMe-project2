@@ -3,7 +3,6 @@ package com.example.user.bearwithme;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static junit.framework.Assert.*;
@@ -24,7 +23,7 @@ public class BearTest {
 
     @Before
     public void before(){
-        brownBear = new BrownBear("Brown", "Pooky", predictions);
+        brownBear = new BrownBear("Brown", "Pooky");
         beer = new Beer();
         donut = new Donut();
         cheeseBurger = new CheeseBurger();
