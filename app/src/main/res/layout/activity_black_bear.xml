@@ -4,16 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/black_bear_fortune">
 
-    <EditText
-        android:id="@+id/question_text"
-        android:hint="@string/question"
-        android:textSize="25dp"
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="@string/food_message"
         android:layout_width="wrap_content"
@@ -60,6 +50,16 @@
         android:layout_height="100dp"
         android:layout_marginBottom="29dp"
         android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/question_text"
+        android:hint="@string/question"
+        android:textSize="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
